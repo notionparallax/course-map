@@ -1,5 +1,12 @@
 digraph G {
     // rankdir=LR; // Delete the slashes if you prefer this to run left to right
+    
+    // Spread it out a bit
+    // size = "8.33,16.66!"; // 1200x600 at 72px/in, "!" to force
+    size = "9,20!"; // 1200x600 at 72px/in, "!" to force
+    ratio = "fill"; // see https://graphviz.gitlab.io/_pages/doc/info/attrs.html#d:ratio
+
+
     HighSchool [label="High\nSchool" shape=plaintext]
     HighSchool -> BENV1012
     HighSchool -> BENV1010
@@ -56,6 +63,7 @@ digraph G {
     CODE1231 -> dummy1231 [label="Microcontroller\nprogramming"]
     CODE1231 -> dummy1231 [label="Essay\nWriting"]
     
+    // Mostly here to hold the structure until it's more filled in
     CODE2170 -> CODE2120 [label="Made\nup"]
     CODE1110 -> CODE1210 [label="Critical\nreading"]
     CODE2121 -> CODE2132 [label="Made\nup"]
@@ -132,7 +140,9 @@ digraph G {
 
     //Y2T2 skills
     dummyCODE1234 [label="_" shape=plaintext]
-    CODE1234 -> dummyCODE1234 [label="Todo"]
+    CODE1234 -> dummyCODE1234 [label="AutoML"]
+    CODE1234 -> dummyCODE1234 [label="Tableau"]
+    CODE1234 -> dummyCODE1234 [label="ABS\nData"]
     dummyCODE2120 [label="_" shape=plaintext]
     CODE2120 -> dummyCODE2120 [label="Todo"]
 
@@ -149,10 +159,10 @@ digraph G {
     //Y3T2 skills
 
     //Y3T3 skills
-    dummyCODE3201 [label="_" shape=plaintext]
-    CODE3201 -> dummyCODE3201 [label="Todo"]
-    dummyCODE3202 [label="_" shape=plaintext]
-    CODE3202 -> dummyCODE3202 [label="Todo"]
+    // dummyCODE3201 [label="_" shape=plaintext]
+    // CODE3201 -> dummyCODE3201 [label="Todo"]
+    // dummyCODE3202 [label="_" shape=plaintext]
+    // CODE3202 -> dummyCODE3202 [label="Todo"]
     
     //Make the knowledgebank. Eventually this will be WAY less significant
     // knowledgeBank [shape=plaintext]
