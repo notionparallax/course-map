@@ -39,7 +39,7 @@ digraph G {
     CODE1161 -> dummy1161 [label="Github"]
     CODE1161 -> dummy1161 [label="Basic\nData\nLiteracy"]
     CODE1161 -> dummy1161 [label="File\nSystem"]
-    CODE1161 -> dummy1161 [label="Data\vis"]
+    CODE1161 -> dummy1161 [label="Data\nvis"]
     CODE1161 -> dummy1161 [label="MatPlotLib"]
     CODE1161 -> dummy1161 [label="Basic\nGeospatial\nconcepts"]
     
