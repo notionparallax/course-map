@@ -1,0 +1,123 @@
+digraph G {
+    // rankdir=LR; // Delete the slashes if you prefer this to run left to right
+    HighSchool [label="High\nSchool" shape=plaintext]
+    HighSchool -> BENV1012
+    HighSchool -> BENV1010
+    HighSchool -> CODE1110
+    
+    subgraph cluster_y1 {
+        label = "Year 1";
+        subgraph cluster_y1_t1 {
+            label = "Term 1";
+            BENV1012 [label="BENV1012\nParametric Design\nand Digital Fabrication" shape=hexagon]
+            BENV1010 [label="BENV1010\nCommunications" shape=hexagon]
+            CODE1110 [label="CODE1110\nComputational Design\nTheory 1"]
+            rank = same; BENV1012; BENV1010; CODE1110;
+          }
+          subgraph cluster_y1_t2 {
+            label = "Term 2";
+            CODE1240 [label="CODE1240\nComputational\nDesign 2"]
+            CODE1161 [label="CODE1161\nDesign\nComputing"]
+            rank = same; CODE1240; CODE1161;
+          }
+          subgraph cluster_y1_t3 {
+              label = "Term 3";
+              CODE2121 [label="CODE2121\nComputational\nDesign III"]
+              CODE2170 [label="CODE2170\nBuilding Information\nModelling"]
+              BENV2001 [label="BENV2001\nEmerging Digital\nTechnologies" shape=hexagon]
+              rank = same; CODE2170; CODE2121; BENV2001;
+          }
+    }
+    BENV1012 -> CODE1240 [label="one\nskill"]
+    BENV1012 -> CODE1240 [label="another\nskill"]
+    CODE1240 -> CODE2121
+    
+    // Design Computing intoduces these skills
+    dummy1161 [label="_" shape=plaintext] //Placeholder for skills that don't go anywhere yet
+    CODE1161 -> dummy1161 [label="Python\nProgramming"]
+    CODE1161 -> dummy1161 [label="Basic\nGit"]
+    CODE1161 -> dummy1161 [label="Github"]
+    CODE1161 -> dummy1161 [label="Basic\nData\nLiteracy"]
+    CODE1161 -> dummy1161 [label="File\nSystem"]
+    CODE1161 -> dummy1161 [label="Data\vis"]
+    CODE1161 -> dummy1161 [label="MatPlotLib"]
+    CODE1161 -> dummy1161 [label="Basic\nGeospatial\nconcepts"]
+    
+    // Parametric Design and Digital Fabrication intoduces these skills
+    dummyBENV1012 [label="_" shape=plaintext] //Placeholder for skills that don't go anywhere yet
+    BENV1012 -> dummyBENV1012 [label="Basic\nGrasshopper\nmaybe"]
+    BENV1012 -> dummyBENV1012 [label="intro 3D\nPrinting\nmaybe"]
+    BENV1012 -> dummyBENV1012 [label="intro\nlaser cutting\nmaybe"]
+    
+    // Communications intoduces these skills
+    dummyBENV1010 [label="_" shape=plaintext] //Placeholder for skills that don't go anywhere yet
+    BENV1010 -> dummyBENV1010 [label="Photoshop\nmaybe"]
+    BENV1010 -> dummyBENV1010 [label="InDesign\nmaybe"]
+    
+    
+    subgraph cluster_y2 {
+        label = "Year 2";
+        subgraph cluster_y2_t1 {
+            label = "Term 1";
+            CODE2132 [label="CODE2132\nComputational\nDesign IV"]
+            CODE1210 [label="CODE1210\nComputational\nDesign Theory 2"]
+            CODE1231 [label="CODE1231\nUbiquitous\nCities"]
+            rank = same; CODE2132; CODE1210; CODE1231;
+        }
+        subgraph cluster_y2_t2 {
+            label = "Term 2";
+            CODE2120 [label="CODE2120\nBuilding Data"]
+            CODE1234 [label="CODE1234\nUrban Data"]
+            rank = same; CODE2120; CODE1234;
+        }
+        subgraph cluster_y2_t3 {
+            label = "Term 3";
+            CODE2230 [label="CODE2230\nHuman Machine\nInteraction"]
+            CODE2250 [label="CODE2250\nAdvanced Digital\nFabrication"]
+            rank = same; CODE2230;
+        }
+    }
+    // Ubiquitous Cities intoduces these skills
+    dummy1231 [label="_" shape=plaintext] //Placeholder for skills that don't go anywhere yet
+    CODE1231 -> dummy1231 [label="Microcontroller\nprogramming"]
+    CODE1231 -> dummy1231 [label="Essay\nWriting"]
+    
+    CODE2170 -> CODE2120 [label="Made\nup"]
+    CODE1110 -> CODE1210 [label="Critical\nreading"]
+    CODE2121 -> CODE2132 [label="Made\nup"]
+    BENV1012 -> CODE2250 [label="Made\nup"]
+    CODE1231 -> CODE1234 [label="Made\nup"]
+    CODE1234 -> CODE2250 [label="Made\nup"]
+
+    subgraph cluster_y3 {
+        label = "Year 3";
+        subgraph cluster_y3_t1 {
+            Elective1 [shape=septagon]
+            Elective2 [shape=septagon]
+            Elective3 [shape=septagon]
+        }
+        subgraph cluster_y3_t2 {
+            Elective4 [shape=septagon]
+            Elective5 [shape=septagon]
+            CODE3100 [label="CODE3100\nDigital Collaboration\nStudio"]
+        }
+        subgraph cluster_y3_t3 {
+            CODE3201 [label="CODE3201\nGraduation Project:\nTheory"]
+            CODE3202 [label="CODE3201\nGraduation Project:\nPractice"]
+        }
+    }
+    CODE2132 -> CODE1234 [label="todo"]
+    
+    knowledgeBank [shape=plaintext]
+    dummy1231 -> knowledgeBank
+    dummy1161 -> knowledgeBank
+    dummyBENV1010 -> knowledgeBank
+    knowledgeBank -> CODE3202
+    knowledgeBank -> CODE3201
+
+    GRADUATION [shape=plaintext]
+    CODE2250 -> CODE3100 [label="Made\nup"]
+    CODE3100 -> CODE3201 [label="Made\nup"]
+    CODE3202 -> GRADUATION
+    CODE3201 -> GRADUATION
+}
