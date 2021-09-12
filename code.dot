@@ -28,33 +28,7 @@ digraph G {
               rank = same; CODE2170; CODE2121; BENV2001;
           }
     }
-    BENV1012 -> CODE1240 [label="one\nskill"]
-    BENV1012 -> CODE1240 [label="another\nskill"]
-    CODE1240 -> CODE2121
-    
-    // Design Computing intoduces these skills
-    dummy1161 [label="_" shape=plaintext] //Placeholder for skills that don't go anywhere yet
-    CODE1161 -> dummy1161 [label="Python\nProgramming"]
-    CODE1161 -> dummy1161 [label="Basic\nGit"]
-    CODE1161 -> dummy1161 [label="Github"]
-    CODE1161 -> dummy1161 [label="Basic\nData\nLiteracy"]
-    CODE1161 -> dummy1161 [label="File\nSystem"]
-    CODE1161 -> dummy1161 [label="Data\nvis"]
-    CODE1161 -> dummy1161 [label="MatPlotLib"]
-    CODE1161 -> dummy1161 [label="Basic\nGeospatial\nconcepts"]
-    
-    // Parametric Design and Digital Fabrication intoduces these skills
-    dummyBENV1012 [label="_" shape=plaintext] //Placeholder for skills that don't go anywhere yet
-    BENV1012 -> dummyBENV1012 [label="Basic\nGrasshopper\nmaybe"]
-    BENV1012 -> dummyBENV1012 [label="intro 3D\nPrinting\nmaybe"]
-    BENV1012 -> dummyBENV1012 [label="intro\nlaser cutting\nmaybe"]
-    
-    // Communications intoduces these skills
-    dummyBENV1010 [label="_" shape=plaintext] //Placeholder for skills that don't go anywhere yet
-    BENV1010 -> dummyBENV1010 [label="Photoshop\nmaybe"]
-    BENV1010 -> dummyBENV1010 [label="InDesign\nmaybe"]
-    
-    
+
     subgraph cluster_y2 {
         label = "Year 2";
         subgraph cluster_y2_t1 {
@@ -106,14 +80,103 @@ digraph G {
             CODE3202 [label="CODE3201\nGraduation Project:\nPractice"]
         }
     }
-    CODE2132 -> CODE1234 [label="todo"]
+
+    //Y1T1 skills:
+    // Communications intoduces these skills
+    dummyBENV1010 [label="_" shape=plaintext] //Placeholder for skills that don't go anywhere yet
+    BENV1010 -> dummyBENV1010 [label="InDesign\nmaybe"]
+    BENV1010 -> dummyBENV1010 [label="Photoshop\nmaybe"]
+
+    // Parametric Design and Digital Fabrication intoduces these skills
+    dummyBENV1012 [label="_" shape=plaintext] //Placeholder for skills that don't go anywhere yet
+    BENV1012 -> dummyBENV1012 [label="Basic\nGrasshopper\nmaybe"]
+    BENV1012 -> dummyBENV1012 [label="intro 3D\nPrinting\nmaybe"]
+    BENV1012 -> dummyBENV1012 [label="intro\nlaser cutting\nmaybe"]
+    BENV1012 -> CODE1240 [label="something\nmaybe"]
     
-    knowledgeBank [shape=plaintext]
-    dummy1231 -> knowledgeBank
-    dummy1161 -> knowledgeBank
-    dummyBENV1010 -> knowledgeBank
-    knowledgeBank -> CODE3202
-    knowledgeBank -> CODE3201
+    dummyCODE1110 [label="_" shape=plaintext]
+    CODE1110 -> dummyCODE1110 [label="Todo"]
+
+    //Y1T2 skills
+    // Design Computing intoduces these skills
+    dummy1161 [label="_" shape=plaintext] //Placeholder for skills that don't go anywhere yet
+    CODE1161 -> dummy1161 [label="Python\nProgramming"]
+    CODE1161 -> dummy1161 [label="Basic\nGit"]
+    CODE1161 -> dummy1161 [label="Github"]
+    CODE1161 -> dummy1161 [label="Basic\nData\nLiteracy"]
+    CODE1161 -> dummy1161 [label="File\nSystem"]
+    CODE1161 -> dummy1161 [label="Data\nvis"]
+    CODE1161 -> dummy1161 [label="MatPlotLib"]
+    CODE1161 -> dummy1161 [label="Basic\nGeospatial\nconcepts"]
+    
+    dummyCODE1240 [label="_" shape=plaintext]
+    CODE1240 -> dummyCODE1240 [label="Todo"]
+    CODE1240 -> CODE2121 [label="Todo"]
+    
+    //Y1T3 skills
+    dummyCODE2121 [label="_" shape=plaintext]
+    CODE2121 -> dummyCODE2121 [label="Todo"]
+    dummyCODE2170 [label="_" shape=plaintext]
+    CODE2170 -> dummyCODE2170 [label="Todo"]
+    dummyBENV2001 [label="_" shape=plaintext]
+    BENV2001 -> dummyBENV2001 [label="Todo"]
+    
+    //Y2T1 skills
+    dummyCODE1210 [label="_" shape=plaintext]
+    CODE1210 -> dummyCODE1210 [label="Todo"]
+    dummyCODE1231 [label="_" shape=plaintext]
+    CODE1231 -> dummyCODE1231 [label="Todo"]
+    dummyCODE2132 [label="_" shape=plaintext]
+    CODE2132 -> dummyCODE2132 [label="Todo"]
+    CODE2132 -> CODE1234 [label="todo"]
+
+    //Y2T2 skills
+    dummyCODE1234 [label="_" shape=plaintext]
+    CODE1234 -> dummyCODE1234 [label="Todo"]
+    dummyCODE2120 [label="_" shape=plaintext]
+    CODE2120 -> dummyCODE2120 [label="Todo"]
+
+    //Y2T3 skills
+    dummyCODE2230 [label="_" shape=plaintext]
+    CODE2230 -> dummyCODE2230 [label="Todo"]
+    dummyCODE2250 [label="_" shape=plaintext]
+    CODE2250 -> dummyCODE2250 [label="Todo"]
+    
+    //Y3T1 skills
+    dummyCODE3100 [label="_" shape=plaintext]
+    CODE3100 -> dummyCODE3100 [label="Todo"]
+    
+    //Y3T2 skills
+
+    //Y3T3 skills
+    dummyCODE3201 [label="_" shape=plaintext]
+    CODE3201 -> dummyCODE3201 [label="Todo"]
+    dummyCODE3202 [label="_" shape=plaintext]
+    CODE3202 -> dummyCODE3202 [label="Todo"]
+    
+    //Make the knowledgebank. Eventually this will be WAY less significant
+    // knowledgeBank [shape=plaintext]
+    // dummy1161 -> knowledgeBank
+    // dummy1231 -> knowledgeBank
+    // dummyBENV1010 -> knowledgeBank
+    // dummyBENV1012 -> knowledgeBank
+    // dummyBENV2001 -> knowledgeBank
+    // dummyCODE1110 -> knowledgeBank
+    // dummyCODE1210 -> knowledgeBank
+    // dummyCODE1231 -> knowledgeBank
+    // dummyCODE1234 -> knowledgeBank   // All commented out because it makes a total mess
+    // dummyCODE1240 -> knowledgeBank
+    // dummyCODE2120 -> knowledgeBank
+    // dummyCODE2121 -> knowledgeBank
+    // dummyCODE2132 -> knowledgeBank
+    // dummyCODE2170 -> knowledgeBank
+    // dummyCODE2230 -> knowledgeBank
+    // dummyCODE2250 -> knowledgeBank
+    // dummyCODE3100 -> knowledgeBank
+    // dummyCODE3201 -> knowledgeBank
+    // dummyCODE3202 -> knowledgeBank
+    // knowledgeBank -> CODE3202
+    // knowledgeBank -> CODE3201
 
     GRADUATION [shape=plaintext]
     CODE2250 -> CODE3100 [label="Made\nup"]
