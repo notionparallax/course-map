@@ -28,9 +28,9 @@ N.B. `\n` is a new line marker so we can keep things all on one line in the file
 
 Each course exports multiple skills, so we can do this:
 
-x -> y [label="being\ncool"]
-x -> y [label="being\smart"]
-x -> z [label="matching belt\nand shoes"]
+    x -> y [label="being\ncool"]
+    x -> y [label="being\smart"]
+    x -> z [label="matching belt\nand shoes"]
 
 I've made a couple of temporary conventions. If you're sure what your course exports, but not where it goes, make it go to a dummy, e.g. 
 
