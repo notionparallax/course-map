@@ -1,6 +1,8 @@
-CoDe Graph
+# CoDe Graph
 
-This is a very nerdy attempt to map the skills that flow through the CoDe course.
+This is a very nerdy attempt to map the skills that flow through the CoDe course. At the moment it looks like this:
+
+![a very messy diagram of the relationships between courses](map.png)
 
 This is mainly so that I (Ben) can understand what skills I need to export from 1161 (Design Computing) so that the students are well placed to do a good job in their subsequent courses.
 
@@ -11,6 +13,8 @@ You can copy the contents of the `code.dot` file and paste it into this site: ht
 It's a bit painful to work with, but the layout engine is amazing, and once there's a tonne of data in there we can make it look pretty in a manual tool.
 
 I've done most of the work of structuring and formatting the graph, so you needn't worry too much about that. But, you can add new edges so that the graph gets more useful.
+
+It's a bit messy at the moment because it's got a _lot_ pointing at dummies. I've done this so that it's got most of the structure in place for others to edit, and it'll get _way_ tidier as we start to fill it in.
 
 The only bit you need to understand is that to draw an edge from x to y, you'd do:
 
