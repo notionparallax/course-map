@@ -8,7 +8,7 @@ This is mainly so that I (Ben) can understand what skills I need to export from 
 
 But, it might be useful for other people to look at. I'm not sure how correct it is as I built it off an oldish map of the course.
 
-You can copy the contents of the `code.dot` file and paste it into this site: https://dreampuf.github.io/GraphvizOnline
+You can copy the contents of the [`code.dot`🔗](/blob/main/code.dot) file and paste it into this site: https://dreampuf.github.io/GraphvizOnline
 
 It's a bit painful to work with, but the layout engine is amazing, and once there's a tonne of data in there we can make it look pretty in a manual tool.
 
