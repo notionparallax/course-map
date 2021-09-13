@@ -14,8 +14,11 @@ digraph G {
     
     subgraph cluster_y1 {
         label = "Year 1";
+        style=filled;
+		color=lightgrey;
         subgraph cluster_y1_t1 {
             label = "Term 1";
+		    color=pink;
             BENV1012 [label="BENV1012\nParametric Design\nand Digital Fabrication" shape=hexagon]
             BENV1010 [label="BENV1010\nCommunications" shape=hexagon]
             CODE1110 [label="CODE1110\nComputational Design\nTheory 1"]
@@ -23,12 +26,14 @@ digraph G {
           }
           subgraph cluster_y1_t2 {
             label = "Term 2";
+            color=pink;
             CODE1240 [label="CODE1240\nComputational\nDesign 2"]
             CODE1161 [label="CODE1161\nDesign\nComputing"]
             rank = same; CODE1240; CODE1161;
           }
           subgraph cluster_y1_t3 {
               label = "Term 3";
+              color=pink;
               CODE2121 [label="CODE2121\nComputational\nDesign III"]
               CODE2170 [label="CODE2170\nBuilding Information\nModelling"]
               BENV2001 [label="BENV2001\nEmerging Digital\nTechnologies" shape=hexagon]
@@ -38,8 +43,11 @@ digraph G {
 
     subgraph cluster_y2 {
         label = "Year 2";
+        style=filled;
+		color=lightgrey;
         subgraph cluster_y2_t1 {
             label = "Term 1";
+            color=pink;
             CODE2132 [label="CODE2132\nComputational\nDesign IV"]
             CODE1210 [label="CODE1210\nComputational\nDesign Theory 2"]
             CODE1231 [label="CODE1231\nUbiquitous\nCities"]
@@ -47,43 +55,41 @@ digraph G {
         }
         subgraph cluster_y2_t2 {
             label = "Term 2";
+            color=pink;
             CODE2120 [label="CODE2120\nBuilding Data"]
             CODE1234 [label="CODE1234\nUrban Data"]
             rank = same; CODE2120; CODE1234;
         }
         subgraph cluster_y2_t3 {
             label = "Term 3";
+            color=pink;
             CODE2230 [label="CODE2230\nHuman Machine\nInteraction"]
             CODE2250 [label="CODE2250\nAdvanced Digital\nFabrication"]
             rank = same; CODE2230;
         }
     }
-    // Ubiquitous Cities intoduces these skills
-    dummy1231 [label="_" shape=plaintext] //Placeholder for skills that don't go anywhere yet
-    CODE1231 -> dummy1231 [label="Microcontroller\nprogramming"]
-    CODE1231 -> dummy1231 [label="Essay\nWriting"]
     
-    // Mostly here to hold the structure until it's more filled in
-    CODE2170 -> CODE2120 [label="Made\nup"]
-    CODE1110 -> CODE1210 [label="Critical\nreading"]
-    CODE2121 -> CODE2132 [label="Made\nup"]
-    BENV1012 -> CODE2250 [label="Made\nup"]
-    CODE1231 -> CODE1234 [label="Made\nup"]
-    CODE1234 -> CODE2250 [label="Made\nup"]
-
     subgraph cluster_y3 {
         label = "Year 3";
+        style=filled;
+		color=lightgrey;
         subgraph cluster_y3_t1 {
+            label = "Term 1";
+            color=pink;
             Elective1 [shape=septagon]
             Elective2 [shape=septagon]
             Elective3 [shape=septagon]
         }
         subgraph cluster_y3_t2 {
+            label = "Term 2";
+            color=pink;
             Elective4 [shape=septagon]
             Elective5 [shape=septagon]
             CODE3100 [label="CODE3100\nDigital Collaboration\nStudio"]
         }
         subgraph cluster_y3_t3 {
+            label = "Term 3";
+            color=pink;
             CODE3201 [label="CODE3201\nGraduation Project:\nTheory"]
             CODE3202 [label="CODE3201\nGraduation Project:\nPractice"]
         }
@@ -133,7 +139,10 @@ digraph G {
     dummyCODE1210 [label="_" shape=plaintext]
     CODE1210 -> dummyCODE1210 [label="Todo"]
     dummyCODE1231 [label="_" shape=plaintext]
-    CODE1231 -> dummyCODE1231 [label="Todo"]
+    // Ubiquitous Cities intoduces these skills
+    dummy1231 [label="_" shape=plaintext]
+    CODE1231 -> dummy1231 [label="Microcontroller\nprogramming"]
+    CODE1231 -> dummy1231 [label="Essay\nWriting"]
     dummyCODE2132 [label="_" shape=plaintext]
     CODE2132 -> dummyCODE2132 [label="Todo"]
     CODE2132 -> CODE1234 [label="todo"]
@@ -159,10 +168,18 @@ digraph G {
     //Y3T2 skills
 
     //Y3T3 skills
-    // dummyCODE3201 [label="_" shape=plaintext]
-    // CODE3201 -> dummyCODE3201 [label="Todo"]
-    // dummyCODE3202 [label="_" shape=plaintext]
-    // CODE3202 -> dummyCODE3202 [label="Todo"]
+
+
+    
+    
+    // Mostly here to hold the structure until it's more filled in
+    CODE2170 -> CODE2120 [label="Made\nup"]
+    CODE1110 -> CODE1210 [label="Critical\nreading"]
+    CODE2121 -> CODE2132 [label="Made\nup"]
+    BENV1012 -> CODE2250 [label="Made\nup"]
+    CODE1231 -> CODE1234 [label="Made\nup"]
+    CODE1234 -> CODE2250 [label="Made\nup"]
+
     
     //Make the knowledgebank. Eventually this will be WAY less significant
     // knowledgeBank [shape=plaintext]
