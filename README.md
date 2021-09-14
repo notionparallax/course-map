@@ -4,7 +4,7 @@ This is a very nerdy attempt to map the skills that flow through the CoDe course
 
 ![a very messy diagram of the relationships between courses](map.png)
 
-This is mainly so that I (Ben) can understand what skills I need to export from 1161 (Design Computing) so that the students are well placed to do a good job in their subsequent courses.
+This is mainly so that I (Ben) can understand what skills I need to export from 1161 (Design Computing) so that the students are well placed to do a good job in their later courses.
 
 But, it might be useful for other people to look at. I'm not sure how correct it is as I built it off an oldish map of the course.
 
