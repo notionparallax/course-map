@@ -95,6 +95,16 @@ digraph G {
         }
     }
 
+    subgraph grasshopper {
+        label = "Grasshopper"
+        color=green;
+        
+        BENV1012;
+        CODE1240;
+        CODE2121;
+
+    }
+
     //Y1T1 skills:
     // Communications intoduces these skills
     dummyBENV1010 [label="_" shape=plaintext] //Placeholder for skills that don't go anywhere yet
@@ -106,7 +116,7 @@ digraph G {
     BENV1012 -> dummyBENV1012 [label="Basic\nGrasshopper\nmaybe"]
     BENV1012 -> dummyBENV1012 [label="intro 3D\nPrinting\nmaybe"]
     BENV1012 -> dummyBENV1012 [label="intro\nlaser cutting\nmaybe"]
-    BENV1012 -> CODE1240 [label="something\nmaybe"]
+    BENV1012 -> CODE1240 [label="Basic\nGrasshopper\nmaybe"]
     
     dummyCODE1110 [label="_" shape=plaintext]
     CODE1110 -> dummyCODE1110 [label="Todo"]
@@ -114,14 +124,22 @@ digraph G {
     //Y1T2 skills
     // Design Computing intoduces these skills
     dummy1161 [label="_" shape=plaintext] //Placeholder for skills that don't go anywhere yet
-    CODE1161 -> dummy1161 [label="Python\nProgramming"]
-    CODE1161 -> dummy1161 [label="Basic\nGit"]
-    CODE1161 -> dummy1161 [label="Github"]
     CODE1161 -> dummy1161 [label="Basic\nData\nLiteracy"]
-    CODE1161 -> dummy1161 [label="File\nSystem"]
-    CODE1161 -> dummy1161 [label="Data\nvis"]
-    CODE1161 -> dummy1161 [label="MatPlotLib"]
     CODE1161 -> dummy1161 [label="Basic\nGeospatial\nconcepts"]
+    CODE1161 -> dummy1161 [label="MatPlotLib"]
+    CODE1161 -> dummy1161 [label="Understanding the\nFile System"]
+    CODE1161 -> CODE1231 [label="Text\nbased\nProgramming"]
+    CODE1161 -> CODE1234 [label="Data\nvis"]
+    CODE1161 -> CODE1234 [label="Pandas"]
+    CODE1161 -> CODE1234 [label="Python\nProgramming"]
+    CODE1161 -> CODE1234 [label="Basic\nGithub"]
+    CODE1161 -> CODE1234 [label="Basic\nGit"]
+    // CODE1161 -> dummy1161 [label="CLO 1\nDemonstrate a synthesis\nof technical and\ntheoretical knowledge of\ndesign computing" color=orange]
+    // CODE1161 -> dummy1161 [label="CLO 2\nApply design computing\nin their own design\nprojects and\nprofessional work." color=orange]
+    // CODE1161 -> dummy1161 [label="CLO 3\nApply skills in a\ntext based\nprogramming\nlanguage" color=orange]
+    // CODE1161 -> dummy1161 [label="CLO 4\nDemonstrate relevant\nverbal and multimedia\ncommunication skills." color=orange]
+
+
     
     dummyCODE1240 [label="_" shape=plaintext]
     CODE1240 -> dummyCODE1240 [label="Todo"]
@@ -143,18 +161,21 @@ digraph G {
     dummy1231 [label="_" shape=plaintext]
     CODE1231 -> dummy1231 [label="Microcontroller\nprogramming"]
     CODE1231 -> dummy1231 [label="Essay\nWriting"]
+    CODE1231 -> dummy1231 [label="Critical\nthinking"]
+    CODE1231 -> dummy1231 [label="Sensing\nand\nActuating"]
+    CODE1231 -> dummy1231 [label="Urban\ntechnology\ndesign"]
     dummyCODE2132 [label="_" shape=plaintext]
     CODE2132 -> dummyCODE2132 [label="Todo"]
-    CODE2132 -> CODE1234 [label="todo"]
-
+    CODE2132 -> CODE1234 [label="Data Collection"]
+    
     //Y2T2 skills
     dummyCODE1234 [label="_" shape=plaintext]
-    CODE1234 -> dummyCODE1234 [label="AutoML"]
-    CODE1234 -> dummyCODE1234 [label="Tableau"]
-    CODE1234 -> dummyCODE1234 [label="ABS\nData"]
+    CODE1234 -> dummyCODE1234 [label="ML Concepts\nwith AutoML"]
+    CODE1234 -> dummyCODE1234 [label="Datavis\nTableau"]
+    CODE1234 -> dummyCODE1234 [label="ABS\nDatapack"]
+    CODE1234 -> dummyCODE1234 [label="Urban Design\nPrinciples"]
     dummyCODE2120 [label="_" shape=plaintext]
-    CODE2120 -> dummyCODE2120 [label="Todo"]
-
+    
     //Y2T3 skills
     dummyCODE2230 [label="_" shape=plaintext]
     CODE2230 -> dummyCODE2230 [label="Todo"]
@@ -170,14 +191,10 @@ digraph G {
     //Y3T3 skills
 
 
-    
-    
     // Mostly here to hold the structure until it's more filled in
-    CODE2170 -> CODE2120 [label="Made\nup"]
     CODE1110 -> CODE1210 [label="Critical\nreading"]
     CODE2121 -> CODE2132 [label="Made\nup"]
-    BENV1012 -> CODE2250 [label="Made\nup"]
-    CODE1231 -> CODE1234 [label="Made\nup"]
+    CODE2120 -> CODE2250 [label="Made\nup"]
     CODE1234 -> CODE2250 [label="Made\nup"]
 
     
